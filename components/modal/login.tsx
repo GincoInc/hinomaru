@@ -2,13 +2,13 @@ import React, { ChangeEvent, FC } from 'react'
 import modalChild from '@styles/components/modal/login.module.scss'
 import animation from '@styles/components/core/animation.module.scss'
 type ModalProps = {
-  active: boolean
+  isShowLoginModal: boolean
   signin: () => void
   setEmail: (email: string) => void
 }
 
 export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
-  const { active, signin, setEmail } = props
+  const { isShowLoginModal, signin, setEmail } = props
 
   const handleChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value)
@@ -16,11 +16,11 @@ export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
   return (
     <div
       className={`${modalChild.modalContent} ${
-        active ? animation.slideDown : ''
+        !isShowLoginModal ? animation.slideDown : ''
       }`}>
       <div
         className={`${modalChild.modalTitle} ${
-          active ? animation.slideDown : ''
+          !isShowLoginModal ? animation.slideDown : ''
         }`}>
         <p>
           Sign in to <span className={modalChild.modalTitleBold}>Hinomaru</span>
@@ -32,7 +32,7 @@ export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
       </div>
       <div
         className={`${modalChild.modalInputBox}  ${
-          active ? animation.slideDown : animation.slideUp
+          !isShowLoginModal ? animation.slideDown : animation.slideUp
         }`}>
         <input
           type='text'
@@ -42,7 +42,7 @@ export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
       </div>
       <button
         className={`${modalChild.modalButton} ${
-          active ? animation.slideDown : animation.slideUp
+          !isShowLoginModal ? animation.slideDown : animation.slideUp
         }`}
         onClick={signin}>
         Signin
