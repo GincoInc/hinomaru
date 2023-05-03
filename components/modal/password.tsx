@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FC, useEffect } from 'react'
-import modalChild from '@styles/components/modal/login.module.scss'
+import modalChild from '@styles/components/modal/password.module.scss'
 import animation from '@styles/components/core/animation.module.scss'
 type ModalProps = {
   isShowPasswordModal: boolean
@@ -17,20 +17,20 @@ export const ModalContentPassword: FC<ModalProps> = (props: ModalProps) => {
 
   return (
     <div
-      className={`${modalChild.modalContent} ${
+      className={`${modalChild.content} ${
         !isShowPasswordModal ? animation.slideDown : ''
       }`}>
       <div
-        className={`${modalChild.modalTitle} ${
+        className={`${modalChild.title} ${
           !isShowPasswordModal ? animation.slideDown : ''
         }`}>
         <p>
-          <span className={modalChild.modalTitleBold}>Hinomaru</span>
+          <span className={modalChild.titleBold}>Hinomaru</span>
         </p>
       </div>
-      <div className={modalChild.modalIconContainer}></div>
+      <div className={modalChild.iconContainer}></div>
       <div
-        className={`${modalChild.modalInputBox}  ${
+        className={`${modalChild.inputBox}  ${
           !isShowPasswordModal ? animation.slideDown : animation.slideUp
         }`}>
         <input
@@ -40,13 +40,13 @@ export const ModalContentPassword: FC<ModalProps> = (props: ModalProps) => {
         />
       </div>
       <button
-        className={`${modalChild.modalButton} ${
+        className={`${modalChild.button} ${
           !isShowPasswordModal ? animation.slideDown : animation.slideUp
         }`}
         onClick={onEncypt}>
         Encrypt
       </button>
-      <div className={modalChild.modalTextAdditional}>
+      <div className={modalChild.textAdditional}>
         <p>Privacy・Terms</p>
       </div>
     </div>

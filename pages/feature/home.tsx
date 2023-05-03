@@ -1,6 +1,6 @@
 import { ReactElement, useState, useEffect } from 'react'
 import FeaturePageLayout from '@/components/layout/featurePageLayout'
-import modalChild from '@styles/components/modal/login.module.scss'
+import css from '@styles/pages/home.module.scss'
 import { ModalContainer } from '@/components/modalContainer'
 import { ModalContentPassword } from '@/components/modal/password'
 import { ModalContentWallet } from '@/components/modal/wallet'
@@ -44,7 +44,7 @@ export const useFirebaseAuth = () => {
   }
 }
 
-const FeaturePasswordModal = () => {
+const Home = () => {
   const [password, setPassword] = useState<string>('')
   const [isLoading, setIsLoading] = useState(false)
   const [isModalActive, setIsModalActive] = useState(true)
@@ -163,7 +163,7 @@ const FeaturePasswordModal = () => {
   }, [])
 
   return (
-    <div className={`${modalChild.container}`}>
+    <div className={`${css.homeContainer}`}>
       <ModalContainer onClose={onClose} isModalActive={isModalActive}>
         {isShowPasswordModal ? (
           <ModalContentPassword
@@ -199,8 +199,8 @@ const FeaturePasswordModal = () => {
   )
 }
 
-FeaturePasswordModal.getLayout = (page: ReactElement) => {
+Home.getLayout = (page: ReactElement) => {
   return <FeaturePageLayout>{page}</FeaturePageLayout>
 }
 
-export default FeaturePasswordModal
+export default Home
