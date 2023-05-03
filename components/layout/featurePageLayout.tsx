@@ -48,6 +48,11 @@ export const FeaturePageLayout: FC<FeaturePageLayoutProps> = ({
               Password
             </Link>
           </div>
+          <div className='pr-3'>
+            <Link className='hover:text-yellow-400' href='/feature/wallet'>
+              Wallet
+            </Link>
+          </div>
         </div>
       </div>
       <div className='w-full px-8 pt-40 h-screen'>{children}</div>

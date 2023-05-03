@@ -3,7 +3,7 @@ import FeaturePageLayout from '@/components/layout/featurePageLayout'
 import modalChild from '@styles/components/modal/login.module.scss'
 import { ModalContainer } from '@/components/modalContainer'
 import { ModalContentPassword } from '@/components/modal/password'
-import { ModalContentHome } from '@/components/modal/home'
+import { ModalContentWallet } from '@/components/modal/wallet'
 import { ModalContentLogin } from '@/components/modal/login'
 import { ModalContentEmailSent } from '@/components/modal/emailSentMessage'
 import { db, auth } from '@/utils/firebase'
@@ -156,6 +156,7 @@ const FeaturePasswordModal = () => {
           console.error(e)
         })
         .finally(() => {
+          console.log('asdf')
           setIsShowHomeModal(true)
         })
     }
@@ -171,7 +172,7 @@ const FeaturePasswordModal = () => {
             setPassword={setPassword}
           />
         ) : isShowHomeModal ? (
-          <ModalContentHome
+          <ModalContentWallet
             onClickAddBalance={onClickAddBalance}
             onClickSend={onClickSend}
             logout={logout}
@@ -186,7 +187,7 @@ const FeaturePasswordModal = () => {
         ) : isShowEmailModal ? (
           <ModalContentEmailSent />
         ) : (
-          <ModalContentHome
+          <ModalContentWallet
             onClickAddBalance={onClickAddBalance}
             onClickSend={onClickSend}
             logout={logout}

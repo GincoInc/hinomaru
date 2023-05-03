@@ -8,7 +8,7 @@ type ModalProps = {
   isLoading: boolean
 }
 
-export const ModalContentHome: FC<ModalProps> = (props: ModalProps) => {
+export const ModalContentWallet: FC<ModalProps> = (props: ModalProps) => {
   const { onClickAddBalance, onClickSend, logout, isLoading } = props
 
   return (
