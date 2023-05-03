@@ -137,7 +137,7 @@ const FeaturePasswordModal = () => {
   }
 
   const actionCodeSettings = {
-    url: `http://localhost:3060/login?email=${email}`,
+    url: `http://localhost:3060/feature/password?email=${email}`,
     handleCodeInApp: true,
   }
 
@@ -151,9 +151,13 @@ const FeaturePasswordModal = () => {
         auth,
         router.query.email as string,
         window.location.href
-      ).catch((e) => {
-        console.error(e)
-      })
+      )
+        .catch((e) => {
+          console.error(e)
+        })
+        .finally(() => {
+          setIsShowHomeModal(true)
+        })
     }
   }, [])
 
