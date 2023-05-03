@@ -8,7 +8,7 @@ import { ModalContentEmailSent } from '@/components/modal/emailSentMessage'
 const FeatureLoginModal = () => {
   const [active, setActive] = useState(false)
   const [isShowTwoFactorSection, setIsShowTwoFactorSection] = useState(false)
-
+  const [isModalActive, setIsModalActive] = useState(true)
   const onLoad = async () => {
     console.log('onLoad')
   }
@@ -23,6 +23,7 @@ const FeatureLoginModal = () => {
   }
 
   const onClose = () => {
+    setIsModalActive(false)
     console.log('onClose')
   }
 
@@ -32,7 +33,7 @@ const FeatureLoginModal = () => {
 
   return (
     <div className={`${modalChild.container}`}>
-      <ModalContainer onClose={onClose}>
+      <ModalContainer onClose={onClose} isModalActive={isModalActive}>
         {!isShowTwoFactorSection ? (
           <ModalContentLogin active={active} onclick={onclick} />
         ) : (
