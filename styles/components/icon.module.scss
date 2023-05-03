@@ -1,0 +1,13 @@
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(240, 240, 240);
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  &:hover {
+    transition: all 0.4s ease;
+    background-color: rgb(228, 226, 226);
+  }
+}

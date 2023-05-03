@@ -1,0 +1,41 @@
+.modalContainer {
+  width: 432px;
+  box-shadow: 0 12px 56px rgba(119, 118, 122, 0.15);
+  border-radius: 28px;
+  position: relative;
+  padding: 16px;
+  overflow: hidden;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+
+  .closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+    overflow: hidden;
+  }
+
+  .footerSection {
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+
+    .footerSectionContent {
+      padding: 10px 0 16px 0;
+
+      p {
+        text-align: center;
+        color: #646366;
+        font-size: 12px;
+      }
+    }
+  }
+}
