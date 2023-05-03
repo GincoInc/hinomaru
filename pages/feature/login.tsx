@@ -14,7 +14,6 @@ import {
   signInWithEmailLink,
   onAuthStateChanged,
 } from 'firebase/auth'
-// import { useFirebaseAuth } from '../login'
 
 export const useFirebaseAuth = () => {
   const [authUser, setAuthUser] = useState<User | null>(null)
@@ -41,8 +40,7 @@ export const useFirebaseAuth = () => {
 }
 
 const FeatureLoginModal = () => {
-  const [active, setActive] = useState(false)
-  const [isShowTwoFactorSection, setIsShowTwoFactorSection] = useState(false)
+  const [isShowLoginModal, setIsShowLoginModal] = useState(true)
   const [email, setEmail] = useState('')
   const [isModalActive, setIsModalActive] = useState(true)
   const [info, setInfo] = useState('')
@@ -59,9 +57,8 @@ const FeatureLoginModal = () => {
       console.log(e)
     }
     //last
-    setActive(true)
     setTimeout(() => {
-      setIsShowTwoFactorSection(true)
+      setIsShowLoginModal(false)
     }, 200)
   }
 
@@ -96,9 +93,9 @@ const FeatureLoginModal = () => {
   return (
     <div className={`${modalChild.container}`}>
       <ModalContainer onClose={onClose} isModalActive={isModalActive}>
-        {!isShowTwoFactorSection ? (
+        {isShowLoginModal ? (
           <ModalContentLogin
-            active={active}
+            isShowLoginModal={isShowLoginModal}
             signin={signin}
             setEmail={setEmail}
           />

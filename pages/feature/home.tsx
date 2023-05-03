@@ -2,7 +2,7 @@ import { ReactElement, useState, useEffect } from 'react'
 import FeaturePageLayout from '@/components/layout/featurePageLayout'
 import pageCss from '@styles/pages/signature.module.scss'
 import { ModalContainer } from '@/components/modalContainer'
-import { ModalContentModal } from '@/components/modal/home'
+import { ModalContentHome } from '@/components/modal/home'
 
 const FeatureLoginModal = () => {
   const [isModalActive, setIsModalActive] = useState(true)
@@ -35,7 +35,7 @@ const FeatureLoginModal = () => {
   return (
     <div className={`${pageCss.container}`}>
       <ModalContainer onClose={onClose} isModalActive={isModalActive}>
-        <ModalContentModal
+        <ModalContentHome
           onClickAddBalance={onClickAddBalance}
           onClickSend={onClickSend}
           logout={logout}

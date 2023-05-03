@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import animation from '@styles/components/core/animation.module.scss'
 import modalChild from '@styles/components/modal/home.module.scss'
 type ModalProps = {
   onClickAddBalance: () => void
@@ -7,11 +8,11 @@ type ModalProps = {
   isLoading: boolean
 }
 
-export const ModalContentModal: FC<ModalProps> = (props: ModalProps) => {
+export const ModalContentHome: FC<ModalProps> = (props: ModalProps) => {
   const { onClickAddBalance, onClickSend, logout, isLoading } = props
 
   return (
-    <div className={`${modalChild.content}`}>
+    <div className={`${modalChild.content} ${animation.slideUpNextContent}`}>
       <div className={modalChild.title}>
         <p>Wallet</p>
       </div>
