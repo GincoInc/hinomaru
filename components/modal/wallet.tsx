@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import animation from '@styles/components/core/animation.module.scss'
-import modalChild from '@styles/components/modal/home.module.scss'
+import modalChild from '@styles/components/modal/wallet.module.scss'
 type ModalProps = {
   onClickAddBalance: () => void
   onClickSend: () => void
