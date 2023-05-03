@@ -1,0 +1,116 @@
+.content {
+  padding: 0 2px;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+
+  .testnet {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+    p {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #a36b14;
+      margin-bottom: 16px;
+    }
+  }
+
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    min-height: 50px;
+  }
+
+  .title {
+    padding: 15px 0;
+    p {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .requestContainer {
+    border: 1px solid var(--c-border-primary);
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 220px;
+    overflow: auto;
+    width: 100%;
+    .requestContainerInfo {
+      .requestContainerInfoTitle {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--c-primary);
+        line-height: 130%;
+      }
+      .requestContainerInfoDomain {
+        font-size: 14px;
+        color: #9a999c;
+      }
+    }
+    .requestContainerDivider {
+      margin: 15px 0;
+      height: 1px;
+      width: 100%;
+      border-top: 1px solid var(--c-border-primary);
+    }
+    .requestContainerMessage {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 0 40px 0;
+
+    .buttonCommon {
+      width: 47%;
+      padding: 10px 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      margin: 0;
+      border: 1px solid transparent;
+      border-radius: 25px;
+      transition: 0.2s;
+      will-change: transform, color, background-color, border-color;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .buttonCancel {
+      color: #323232;
+      font-weight: 600;
+      border-color: var(--c-button-cancel);
+      background-color: var(--c-button-cancel);
+      &:hover {
+        background-color: var(--c-button-cancel-hover);
+      }
+    }
+    .buttonSign {
+      color: #fff;
+      font-weight: 600;
+      border-color: var(--c-primary);
+      background-color: var(--c-primary);
+      &:hover {
+        border-color: var(--c-primary-hover);
+        background-color: var(--c-primary-hover);
+      }
+      &:disabled {
+        border-color: rgba(14, 112, 230, 0); // transparent;
+        background-color: var(--c-primary-disabled);
+      }
+    }
+  }
+}
