@@ -18,7 +18,7 @@
         color: #646366;
         margin-bottom: 16px;
         .modalTitleBold {
-          color: #0e70e6;
+          color: var(--c-primary);
           font-weight: 600;
         }
       }
@@ -60,12 +60,12 @@
         line-height: 24px;
         &:hover {
           transition: all 0.2s ease;
-          outline: 1px solid #0e70e6;
+          outline: 1px solid var(--c-primary);
         }
         &:focus {
           transition: all 0.2s ease;
-          border-color: #0e70e6;
-          outline: 2px solid #0e70e6;
+          border-color: var(--c-primary);
+          outline: 2px solid var(--c-primary);
         }
       }
     }
@@ -80,18 +80,18 @@
       color: #fff;
       border: 1px solid transparent;
       border-radius: 2147483647px;
-      background-color: #0e70e6;
+      background-color: var(--c-primary);
       transition: 0.2s;
       will-change: transform, color, background-color, border-color;
       outline: none;
       cursor: pointer;
 
       &:hover {
-        background-color: rgba(23, 89, 170, 0.945);
+        background-color: var(--c-primary-hover);
       }
 
       &:disabled {
-        background-color: rgba(14, 112, 230, 0.5);
+        background-color: var(--c-primary-disabled);
         cursor: not-allowed;
       }
     }
