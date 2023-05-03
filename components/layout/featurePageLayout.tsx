@@ -38,6 +38,11 @@ export const FeaturePageLayout: FC<FeaturePageLayoutProps> = ({
               Signature
             </Link>
           </div>
+          <div className='pr-3'>
+            <Link className='hover:text-yellow-400' href='/feature/password'>
+              Password
+            </Link>
+          </div>
         </div>
       </div>
       <div className='w-full px-8 pt-40 h-screen'>{children}</div>
