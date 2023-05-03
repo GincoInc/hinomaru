@@ -1,0 +1,127 @@
+.content {
+  padding: 0 15px;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .title {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+    p {
+      color: var(--c-primary);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+  }
+
+  .title {
+    padding: 15px 0;
+    p {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .walletInfo {
+    border: 1px solid var(--c-border-primary);
+    border-radius: 8px;
+    padding: 15px;
+    max-height: 220px;
+    overflow: auto;
+    width: 100%;
+    .walletAddress,
+    .walletBalance {
+      padding: 5px 0;
+      display: flex;
+      .key {
+        color: #323323;
+        font-weight: 600;
+        width: 35%;
+      }
+      .value {
+        margin-left: auto;
+        width: 65%;
+        word-break: break-all;
+        p {
+          text-align: right;
+        }
+      }
+
+      .valueBalance {
+        display: flex;
+        .valueEth {
+          width: 70%;
+          font-size: 14px;
+        }
+        .valueFiat {
+          width: 30%;
+          font-size: 14px;
+          p {
+            color: #9a999c;
+          }
+        }
+      }
+    }
+  }
+
+  .buttonContainer {
+    width: 100%;
+    padding: 20px 0 10px 0;
+
+    .buttonCommon {
+      width: 100%;
+      padding: 10px 24px;
+      margin: 8px 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      border-radius: 25px;
+      transition: 0.2s;
+      will-change: transform, color, background-color, border-color;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .buttonAddBalance {
+      color: #fff;
+      font-weight: 600;
+      border-color: var(--c-primary);
+      background-color: var(--c-primary);
+      &:hover {
+        border-color: var(--c-primary-hover);
+        background-color: var(--c-primary-hover);
+      }
+      &:disabled {
+        border-color: rgba(14, 112, 230, 0); // transparent;
+        background-color: var(--c-primary-disabled);
+      }
+    }
+
+    .buttonSend {
+      color: #fff;
+      font-weight: 600;
+      border-color: var(--c-primary);
+      background-color: var(--c-primary);
+      &:hover {
+        border-color: var(--c-primary-hover);
+        background-color: var(--c-primary-hover);
+      }
+      &:disabled {
+        border-color: rgba(14, 112, 230, 0); // transparent;
+        background-color: var(--c-primary-disabled);
+      }
+    }
+
+    .buttonLogout {
+      color: var(--c-primary);
+    }
+  }
+}
