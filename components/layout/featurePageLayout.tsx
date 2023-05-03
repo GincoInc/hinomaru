@@ -24,6 +24,11 @@ export const FeaturePageLayout: FC<FeaturePageLayoutProps> = ({
         </div>
         <div className='w-full bg-gray-200 py-1 text-md px-8 text-gray-600 flex'>
           <div className='pr-3'>
+            <Link className='hover:text-yellow-400' href='/feature/signup'>
+              Sign Up
+            </Link>
+          </div>
+          <div className='pr-3'>
             <Link className='hover:text-yellow-400' href='/feature/login'>
               Login
             </Link>
