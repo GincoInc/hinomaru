@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
 import Fortmatic from 'fortmatic'
 import Web3 from 'web3'
 import { AbiItem } from 'web3-utils'
+import ResearchPageLayout from '@/components/layout/researchPageLayout'
 import MESSAGE_ABI_JSON from '@/static/abi/messageContractAbi.json'
 // const ethUtil = require('ethereumjs-util')
 
@@ -111,6 +112,10 @@ const FortmaticHome = () => {
   }, [])
 
   return <div className='text-lg bold text-gray-500'>fortmatic test</div>
+}
+
+FortmaticHome.getLayout = (page: ReactElement) => {
+  return <ResearchPageLayout>{page}</ResearchPageLayout>
 }
 
 export default FortmaticHome

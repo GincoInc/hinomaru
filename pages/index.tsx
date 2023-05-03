@@ -36,11 +36,6 @@ export default function Home() {
             <h2>Fortmatic</h2>
             <div className='px-4'>
               <div>
-                <Link className='hover:text-yellow-400' href='/feature/login'>
-                  Login Modal
-                </Link>
-              </div>
-              <div>
                 <Link className='hover:text-yellow-400' href='/fortmatic/login'>
                   Login
                 </Link>

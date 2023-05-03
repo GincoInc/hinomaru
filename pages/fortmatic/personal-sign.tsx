@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect } from 'react'
+import ResearchPageLayout from '@/components/layout/researchPageLayout'
 import Web3 from 'web3'
 import Fortmatic from 'fortmatic'
 const apiKey = process.env.NEXT_PUBLIC_FORTMATIC_API_KEY
@@ -83,6 +84,10 @@ const PersonalSign = () => {
   }, [])
 
   return <div className='text-lg bold text-gray-500'>personal sign</div>
+}
+
+PersonalSign.getLayout = (page: ReactElement) => {
+  return <ResearchPageLayout>{page}</ResearchPageLayout>
 }
 
 export default PersonalSign

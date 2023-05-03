@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { ReactElement, useEffect } from 'react'
+import ResearchPageLayout from '@/components/layout/researchPageLayout'
 import Web3 from 'web3'
 import { Magic } from 'magic-sdk'
 import { recoverPersonalSignature } from '@metamask/eth-sig-util'
@@ -40,6 +41,10 @@ const MagicPersonalSignatures = () => {
   }, [])
 
   return <div className='text-lg bold text-gray-500'>personal signature</div>
+}
+
+MagicPersonalSignatures.getLayout = (page: ReactElement) => {
+  return <ResearchPageLayout>{page}</ResearchPageLayout>
 }
 
 export default MagicPersonalSignatures

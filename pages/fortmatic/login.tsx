@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
-import Web3 from 'web3'
+import { ReactElement, useEffect } from 'react'
+import ResearchPageLayout from '@/components/layout/researchPageLayout'
 import Fortmatic from 'fortmatic'
+import Web3 from 'web3'
 
 /**
  * @ Localhost
@@ -45,6 +46,10 @@ const Login = () => {
   }, [])
 
   return <div className='text-lg bold text-gray-500'>login</div>
+}
+
+Login.getLayout = (page: ReactElement) => {
+  return <ResearchPageLayout>{page}</ResearchPageLayout>
 }
 
 export default Login

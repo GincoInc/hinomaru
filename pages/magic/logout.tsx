@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { ReactElement, useEffect } from 'react'
+import ResearchPageLayout from '@/components/layout/researchPageLayout'
 import Web3 from 'web3'
 import { Magic } from 'magic-sdk'
 const apiKey = process.env.NEXT_PUBLIC_MAGIC_API_KEY
@@ -40,6 +41,10 @@ const MagicLogout = () => {
   }, [])
 
   return <div className='text-lg bold text-gray-500'>logout</div>
+}
+
+MagicLogout.getLayout = (page: ReactElement) => {
+  return <ResearchPageLayout>{page}</ResearchPageLayout>
 }
 
 export default MagicLogout
