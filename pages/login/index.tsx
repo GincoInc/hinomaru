@@ -58,7 +58,7 @@ const LoginForm = () => {
   };
 
   const actionCodeSettings = {
-    url: `http://localhost:3060?email=${email}`,
+    url: `http://localhost:3060/login?email=${email}`,
     handleCodeInApp: true,
   };
 

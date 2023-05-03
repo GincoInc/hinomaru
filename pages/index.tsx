@@ -9,6 +9,11 @@ export default function Home() {
         </div>
         <div className="px-4 w-full text-gray-500 py-3">
           <div>
+            <Link className="hover:text-yellow-400" href="/login">
+              Login
+            </Link>
+          </div>
+          <div>
             <h2>Modals</h2>
             <div className="px-4">
               <div>
