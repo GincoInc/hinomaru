@@ -1,13 +1,18 @@
-import React, { FC } from 'react'
+import React, { ChangeEvent, FC } from 'react'
 import modalChild from '@styles/components/modal/login.module.scss'
 import animation from '@styles/components/core/animation.module.scss'
 type ModalProps = {
   active: boolean
-  onclick: () => void
+  signin: () => void
+  setEmail: (email: string) => void
 }
 
 export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
-  const { active, onclick } = props
+  const { active, signin, setEmail } = props
+
+  const handleChangeEmail = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value)
+  }
   return (
     <div
       className={`${modalChild.modalContent} ${
@@ -29,20 +34,19 @@ export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
         className={`${modalChild.modalInputBox}  ${
           active ? animation.slideDown : animation.slideUp
         }`}>
-        <input type='text' placeholder='Email address' />
+        <input
+          type='text'
+          placeholder='Email address'
+          onChange={handleChangeEmail}
+        />
       </div>
       <button
         className={`${modalChild.modalButton} ${
           active ? animation.slideDown : animation.slideUp
         }`}
-        onClick={onclick}>
-        Log in / Sign up
+        onClick={signin}>
+        Signin
       </button>
-      <p className={modalChild.typographySm}>OR</p>
-      <button className={modalChild.modalButton} disabled>
-        Log in / Sign up
-      </button>
-      <div className={modalChild.modalActionThirdParty}></div>
       <div className={modalChild.modalTextAdditional}>
         <p>Privacy・Terms</p>
       </div>
