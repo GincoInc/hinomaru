@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 :root {
+  --c-primary: #0e70e6;
+  --c-primary-hover: #1759aa;
+  --c-primary-disabled: rgba(14, 112, 230, 0.5);
+  --c-border-primary: #e5e5e5;
+  --c-button-cancel: #ededf3;
+  --c-button-cancel-hover: #ccccd1;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;

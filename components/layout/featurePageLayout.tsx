@@ -16,17 +16,31 @@ export const FeaturePageLayout: FC<FeaturePageLayoutProps> = ({
           <p className='text-xs'>
             SDKで使用するモーダルを検証するワークスペース
           </p>
+          <p className='text-sm pt-3'>
+            <Link className='hover:text-yellow-500' href='/'>
+              Home はこちら
+            </Link>
+          </p>
         </div>
         <div className='w-full bg-gray-200 py-1 text-md px-8 text-gray-600 flex'>
           <div className='pr-3'>
-            <Link href='/feature/login'>Login</Link>
+            <Link className='hover:text-yellow-400' href='/feature/signup'>
+              Sign Up
+            </Link>
           </div>
-          <div className='pr-3 aaa'>
-            <Link href='/feature/login'>Signature</Link>
+          <div className='pr-3'>
+            <Link className='hover:text-yellow-400' href='/feature/login'>
+              Login
+            </Link>
+          </div>
+          <div className='pr-3'>
+            <Link className='hover:text-yellow-400' href='/feature/signature'>
+              Signature
+            </Link>
           </div>
         </div>
       </div>
-      <div className='w-full px-8 pt-28 h-screen'>{children}</div>
+      <div className='w-full px-8 pt-40 h-screen'>{children}</div>
     </div>
   )
 }

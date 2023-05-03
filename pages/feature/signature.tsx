@@ -1,30 +1,34 @@
 import { ReactElement, useState, useEffect } from 'react'
 import FeaturePageLayout from '@/components/layout/featurePageLayout'
-import modalChild from '@styles/components/modal/login.module.scss'
+import pageCss from '@styles/pages/signature.module.scss'
 import { ModalContainer } from '@/components/modalContainer'
-import { ModalContentLogin } from '@/components/modal/login'
-import { ModalContentEmailSent } from '@/components/modal/emailSentMessage'
+import { ModalContentSignature } from '@/components/modal/signature'
 
 const FeatureLoginModal = () => {
   const [active, setActive] = useState(false)
-  const [isShowTwoFactorSection, setIsShowTwoFactorSection] = useState(false)
   const [isModalActive, setIsModalActive] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
+  const [isFinishedSigning, setIsFinishedSigning] = useState(false)
+
   const onLoad = async () => {
     console.log('onLoad')
   }
 
   const onclick = async () => {
-    console.log('onclick')
     setActive(true)
-    setTimeout(() => {
-      setIsShowTwoFactorSection(true)
-    }, 200)
-    console.log('called')
   }
 
   const onClose = () => {
     setIsModalActive(false)
-    console.log('onClose')
+  }
+
+  const onSign = () => {
+    setIsLoading(true)
+  }
+
+  const onFinishSignature = () => {
+    setIsLoading(false)
+    setIsFinishedSigning(true)
   }
 
   useEffect(() => {
@@ -32,13 +36,15 @@ const FeatureLoginModal = () => {
   }, [])
 
   return (
-    <div className={`${modalChild.container}`}>
+    <div className={`${pageCss.container}`}>
       <ModalContainer onClose={onClose} isModalActive={isModalActive}>
-        {!isShowTwoFactorSection ? (
-          <ModalContentLogin active={active} onclick={onclick} />
-        ) : (
-          <ModalContentEmailSent />
-        )}
+        <ModalContentSignature
+          onClose={onClose}
+          onSign={onSign}
+          isLoading={isLoading}
+          onFinishSignature={onFinishSignature}
+          isFinishedSigning={isFinishedSigning}
+        />
       </ModalContainer>
     </div>
   )

@@ -15,7 +15,7 @@ export const ResearchPageLayout: FC<ReserachPageLayoutProps> = ({
           <p className='text-lg bold'>Research</p>
           <p className='text-xs'>SDKの動作検証をするワークスペース</p>
           <p className='text-sm'>
-            <Link className='hover:text-yellow-400' href='/feature'>
+            <Link className='hover:text-yellow-500' href='/feature'>
               Feature Page はこちら
             </Link>
           </p>

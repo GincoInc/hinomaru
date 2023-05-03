@@ -5,15 +5,13 @@ import animation from '@styles/components/core/animation.module.scss'
 type ModalProps = {
   children: ReactElement
   onClose: () => void
+  isModalActive: boolean
 }
 
 export const ModalContainer: FC<ModalProps> = (props: ModalProps) => {
-  const { children, onClose } = props
-
-  const [isModalActive, setIsModalActive] = useState(true)
+  const { children, onClose, isModalActive } = props
 
   const _onClose = () => {
-    setIsModalActive(false)
     onClose()
   }
 
