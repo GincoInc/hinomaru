@@ -129,7 +129,7 @@ const Home = ({}) => {
   }
 
   const actionCodeSettings = {
-    url: `http://localhost:3060/feature/home-client?email=${email}`,
+    url: `http://localhost:3060/feature/home?email=${email}`,
     handleCodeInApp: true,
   }
 
@@ -198,6 +198,12 @@ const Home = ({}) => {
         setIsFinishedLoading(true)
       } else if (!load && !authUser) {
         switchModalLocation(ModalLocation.LOGIN)
+        setIsFinishedLoading(true)
+      } else if (
+        load &&
+        !authUser &&
+        !isSignInWithEmailLink(auth, window.location.href)
+      ) {
         setIsFinishedLoading(true)
       }
     }
