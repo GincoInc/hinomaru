@@ -1,124 +1,117 @@
-.container {
+.modalContent {
+  padding: 0 2px;
+  flex-direction: column;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 
-  .modalContent {
-    padding: 0 2px;
-    flex-direction: column;
-    width: 100%;
-    overflow: hidden;
-
-    .modalTitle {
-      p {
-        text-align: center;
-        font-size: 14px;
-        font-weight: 400;
-        color: #646366;
-        margin-bottom: 16px;
-        .modalTitleBold {
-          color: var(--c-primary);
-          font-weight: 600;
-        }
-      }
-    }
-
-    .modalIconContainer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      min-height: 140px;
-    }
-
-    // Maybe delete later
-    .modalMessage {
-      p {
-        text-align: center;
-        font-size: 14px;
-        font-weight: 400;
-        color: #646366;
-        margin-bottom: 16px;
-      }
-    }
-
-    .modalInputBox {
-      width: 100%;
-      margin-bottom: 16px;
-      position: relative;
-      cursor: text !important;
-      input {
-        width: 100%;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 1px;
-        overflow: hidden;
-        outline: 1px solid transparent;
-        padding: 12px 16px;
-        font-size: 16px;
-        line-height: 24px;
-        &:hover {
-          transition: all 0.2s ease;
-          outline: 1px solid var(--c-primary);
-        }
-        &:focus {
-          transition: all 0.2s ease;
-          border-color: var(--c-primary);
-          outline: 2px solid var(--c-primary);
-        }
-      }
-    }
-
-    .modalButton {
-      padding: 10px 24px;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      box-sizing: border-box;
-      color: #fff;
-      border: 1px solid transparent;
-      border-radius: 2147483647px;
-      background-color: var(--c-primary);
-      transition: 0.2s;
-      will-change: transform, color, background-color, border-color;
-      outline: none;
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--c-primary-hover);
-      }
-
-      &:disabled {
-        background-color: var(--c-primary-disabled);
-        cursor: not-allowed;
-      }
-    }
-    .typographySm {
-      padding: 15px 0;
+  .modalTitle {
+    p {
       text-align: center;
-      font-weight: 600;
-      font-size: 12px;
+      font-size: 14px;
+      font-weight: 400;
       color: #646366;
+      margin-bottom: 16px;
+      .modalTitleBold {
+        color: var(--c-primary);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .modalIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    min-height: 140px;
+  }
+
+  // Maybe delete later
+  .modalMessage {
+    p {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: #646366;
+      margin-bottom: 16px;
+    }
+  }
+
+  .modalInputBox {
+    width: 100%;
+    margin-bottom: 16px;
+    position: relative;
+    cursor: text !important;
+    input {
+      width: 100%;
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 1px;
+      overflow: hidden;
+      outline: 1px solid transparent;
+      padding: 12px 16px;
+      font-size: 16px;
+      line-height: 24px;
+      &:hover {
+        transition: all 0.2s ease;
+        outline: 1px solid var(--c-primary);
+      }
+      &:focus {
+        transition: all 0.2s ease;
+        border-color: var(--c-primary);
+        outline: 2px solid var(--c-primary);
+      }
+    }
+  }
+
+  .modalButton {
+    padding: 10px 24px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 2147483647px;
+    background-color: var(--c-primary);
+    transition: 0.2s;
+    will-change: transform, color, background-color, border-color;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--c-primary-hover);
     }
 
-    .modalButtonActionThirdParty {
-      padding: 10px 24px;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      box-sizing: border-box;
+    &:disabled {
+      background-color: var(--c-primary-disabled);
+      cursor: not-allowed;
     }
-    .modalTextAdditional {
-      margin-top: 40px;
-      p {
-        text-align: center;
-        font-size: 14px;
-        font-weight: 600;
-        color: #646366;
-      }
+  }
+  .typographySm {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    color: #646366;
+  }
+
+  .modalButtonActionThirdParty {
+    padding: 10px 24px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .modalTextAdditional {
+    margin-top: 40px;
+    p {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #646366;
     }
   }
 }

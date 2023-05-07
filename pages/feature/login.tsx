@@ -2,7 +2,7 @@ import { ReactElement, useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { auth } from '@/utils/firebase'
 import FeaturePageLayout from '@/components/layout/featurePageLayout'
-import modalChild from '@styles/components/modal/login.module.scss'
+import modalChild from '@styles/pages/home.module.scss'
 import { ModalContainer } from '@/components/modalContainer'
 import { ModalContentLogin } from '@/components/modal/login'
 import { ModalContentEmailSent } from '@/components/modal/emailSentMessage'
@@ -91,7 +91,7 @@ const FeatureLoginModal = () => {
   }
 
   return (
-    <div className={`${modalChild.container}`}>
+    <div className={`${modalChild.homeContainer}`}>
       <ModalContainer onClose={onClose} isModalActive={isModalActive}>
         {isShowLoginModal ? (
           <ModalContentLogin
@@ -100,7 +100,7 @@ const FeatureLoginModal = () => {
             setEmail={setEmail}
           />
         ) : (
-          <ModalContentEmailSent />
+          <ModalContentEmailSent email={email} />
         )}
       </ModalContainer>
     </div>

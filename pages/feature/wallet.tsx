@@ -3,7 +3,8 @@ import FeaturePageLayout from '@/components/layout/featurePageLayout'
 import pageCss from '@styles/pages/signature.module.scss'
 import { ModalContainer } from '@/components/modalContainer'
 import { ModalContentWallet } from '@/components/modal/wallet'
-
+import { auth } from '@/utils/firebase'
+import { signOut } from 'firebase/auth'
 const FeatureWalletModal = () => {
   const [isModalActive, setIsModalActive] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
@@ -17,15 +18,15 @@ const FeatureWalletModal = () => {
   }
 
   const onClickAddBalance = () => {
-    setIsLoading(true)
+    console.log('add balance...')
   }
 
   const onClickSend = () => {
-    setIsLoading(true)
+    console.log('send...')
   }
 
   const logout = () => {
-    setIsLoading(true)
+    signOut(auth)
   }
 
   useEffect(() => {

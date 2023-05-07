@@ -185,7 +185,7 @@ const FeaturePasswordModal = () => {
             setEmail={setEmail}
           />
         ) : isShowEmailModal ? (
-          <ModalContentEmailSent />
+          <ModalContentEmailSent email={email} />
         ) : (
           <ModalContentWallet
             onClickAddBalance={onClickAddBalance}
