@@ -3,12 +3,9 @@
   flex-direction: column;
   width: 100%;
   overflow: hidden;
-  position: relative;
 
   .title {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 0 10px 0;
+    padding: 10px 0px;
     p {
       color: var(--c-primary);
       text-align: center;

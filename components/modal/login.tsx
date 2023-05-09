@@ -16,11 +16,11 @@ export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
   return (
     <div
       className={`${modalChild.modalContent} ${
-        !isShowLoginModal ? animation.slideDown : ''
+        isShowLoginModal ? animation.slideDown : ''
       }`}>
       <div
         className={`${modalChild.modalTitle} ${
-          !isShowLoginModal ? animation.slideDown : ''
+          isShowLoginModal ? animation.slideDown : ''
         }`}>
         <p>
           Sign in to <span className={modalChild.modalTitleBold}>Hinomaru</span>
@@ -32,7 +32,7 @@ export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
       </div>
       <div
         className={`${modalChild.modalInputBox}  ${
-          !isShowLoginModal ? animation.slideDown : animation.slideUp
+          isShowLoginModal ? animation.slideDown : animation.slideUp
         }`}>
         <input
           type='text'
@@ -42,7 +42,7 @@ export const ModalContentLogin: FC<ModalProps> = (props: ModalProps) => {
       </div>
       <button
         className={`${modalChild.modalButton} ${
-          !isShowLoginModal ? animation.slideDown : animation.slideUp
+          isShowLoginModal ? animation.slideDown : animation.slideUp
         }`}
         onClick={signin}>
         Signin

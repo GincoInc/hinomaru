@@ -17,9 +17,7 @@ export const ModalContainer: FC<ModalProps> = (props: ModalProps) => {
 
   return (
     <div
-      className={`${modal.container} ${animation.popup} ${
-        !isModalActive ? animation.close : ''
-      }`}>
+      className={`${animation.popup} ${!isModalActive ? animation.close : ''}`}>
       <div className={modal.modalContainer}>
         <div className={modal.closeButton}>
           <CloseIcon onClose={_onClose} />
